@@ -1,24 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
 
+import Header from './Header.js';
+import NavButton from './NavButton.js';
+import CV from './CV.js';
+import MyProjects from './MyProjects.js';
+
+
 function App() {
+  const [displayed, setDisplayed] = useState('CV');
+  const display = s => {
+    switch(s) {
+      case 'CV': 
+        return <CV/>;
+        break;
+      case 'MyProjects':
+        return <MyProjects/>;
+        break;
+      default:
+        return <CV />
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <nav>
+        <NavButton label="CV" onClick={() => setDisplayed('CV') }/>
+        <NavButton label="My projects" onClick={() => setDisplayed('MyProjects') }/>
+      </nav>
+      {display(displayed)}
+      <footer></footer>
     </div>
   );
 }
