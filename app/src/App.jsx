@@ -1,16 +1,16 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
-import Header from './Header.js';
-import NavButton from './NavButton.js';
-import CV from './CV.js';
-import MyProjects from './MyProjects.js';
+import Header from './Header';
+import NavButton from './NavButton';
+import CV from './CV';
+import MyProjects from './MyProjects';
 
 
 function App() {
   const [displayed, setDisplayed] = useState('CV');
-  const display = s => {
-    switch(s) {
+  const display = (s) => {
+    switch (s) {
       case 'CV': 
         return <CV/>;
         break;
@@ -30,7 +30,7 @@ function App() {
         <NavButton label="My projects" onClick={() => setDisplayed('MyProjects') }/>
       </nav>
       {display(displayed)}
-      <footer></footer>
+      <footer>Ef</footer>
     </div>
   );
 }

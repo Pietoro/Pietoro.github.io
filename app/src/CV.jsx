@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import CVBlock from './CVBlock.js';
+import CVBlock from './CVBlock';
 
 function CV() {
   return (
