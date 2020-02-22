@@ -8,28 +8,21 @@ import MyProjects from './MyProjects';
 
 
 function App() {
-  const [displayed, setDisplayed] = useState('CV');
-  const display = (s) => {
-    switch (s) {
-      case 'CV': 
-        return <CV/>;
-        break;
-      case 'MyProjects':
-        return <MyProjects/>;
-        break;
-      default:
-        return <CV />
-    }
-  };
+  const [displayed, setDisplayed] = useState(<CV />);
 
   return (
     <div>
       <Header />
       <nav>
-        <NavButton label="CV" onClick={() => setDisplayed('CV') }/>
-        <NavButton label="My projects" onClick={() => setDisplayed('MyProjects') }/>
+        <NavButton label="CV" onClick={() => setDisplayed(<CV />)} />
+        <NavButton label="My projects" onClick={() => setDisplayed(<MyProjects />)} />
+        {
+        // TODO
+        // <NavLink label="My Github" href="https://github.com/Pietoro" />
+        // <NavLink label="My LinkedIn" href="tubydzielink" />
+        }
       </nav>
-      {display(displayed)}
+      {displayed}
       <footer>Ef</footer>
     </div>
   );
