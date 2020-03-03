@@ -3,45 +3,48 @@ import './App.css';
 import PropTypes from 'prop-types';
 import Styled from 'styled-components';
 
-const Progress = Styled.progress`
-  border: 1px solid black;
-  appeareance: none;
+const PB = Styled.div`
+  height: 11px;
+  width: 150px;
+  border: 3px solid white;
+  border-radius: 8px;
   background-color: white;
   float: right;
-  width: 150px;
+`;
+
+const Progress = Styled.div` 
+  height: 11px;
+  border-radius: 5px;
+  width: ${props => props.value}%;
+  background-color: hsl(198, 100%, 23%);
 `;
 
 const Label = Styled.span`
-  display: inline-block;
+  
 `;
 
-
-function CVBlockElement({ label, progress, sub }) {
-  return (
+function CVBlockElement({label, progress, sub}) {
+  return(
     <li>
       <Label>{label}</Label>
-      {progress != undefined
-        ? <Progress value={progress} /> : undefined}
+      <PB>
+        {progress != undefined
+          ? <Progress value={progress} /> : undefined}
+      </PB>
       <ul>
-        {sub
-          ? sub
-            .map((element) => (
-              <CVBlockElement
-                label={element.label}
-                progress={element.progress}
-                sub={element.sub}
-              />
-            ))
-          : undefined}
+      {sub
+        ? sub
+          .map((element) => (
+            <CVBlockElement
+              label={element.label}
+              progress={element.progress}
+              sub={element.sub}
+            />
+          ))
+        : undefined}
       </ul>
     </li>
   );
 }
-
-CVBlockElement.propTypes = {
-  label: PropTypes.string,
-  progress: PropTypes.number,
-  sub: PropTypes.array,
-};
 
 export default CVBlockElement;

@@ -5,12 +5,12 @@ import CVBlock from './CVBlock';
 function CVBlockLang() {
   return (
     <CVBlock
-      title="Languages"
+      title="Languages spoken"
       elements={[
-        { label: 'Polish', progress: 1.0 },
-        { label: 'English', progress: 0.7 },
-        { label: 'French', progress: 0.15 },
-        { label: 'Italian', progress: 0.1 },
+        { label: 'Polish', progress: 100 },
+        { label: 'English', progress: 70 },
+        { label: 'French', progress: 15 },
+        { label: 'Italian', progress: 10 },
       ]}
     />
   );

@@ -5,11 +5,12 @@ import CVBlockElement from './CVBlockElement';
 import Styled from 'styled-components';
 
 const Div = Styled.div`
-  border: 1px solid black;
   border-radius: 5px;
   padding: 1em;
   margin: 1em;
-  width: 400px;
+  width: 370px;
+  background-color: hsl(50,50%,80%);
+  box-shadow: -5px 5px lightgray;
 `;
 
 

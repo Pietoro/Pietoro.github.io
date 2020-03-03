@@ -5,37 +5,37 @@ import CVBlock from './CVBlock';
 function CVBlockTech() {
   return (
     <CVBlock
-      title="Title"
+      title="Technologies, tools, frameworks"
       elements={[
-        { label: 'HTML5', progress: 0.4 },
+        { label: 'HTML5', progress: 40 },
         {
           label: 'CSS3',
-          progress: 0.4,
+          progress: 40,
           sub: [
-            { label: 'SASS', progress: 0.3 },
+            { label: 'SASS', progress: 30 },
           ],
         },
         {
           label: 'JavaScript ES6+',
-          progress: 0.2,
+          progress: 20,
           sub: [
-            { label: 'React', progress: 0.1 },
+            { label: 'React', progress: 10 },
           ],
         },
         {
           label: 'Java 11+',
-          progress: 0.4,
+          progress: 40,
           sub: [
-            { label: 'JUnit, AssertJ', progress: 0.1 },
-            { label: 'JavaFX', progress: 0.1 },
-            { label: 'Maven', progress: 0.3 },
+            { label: 'JUnit, AssertJ', progress: 10 },
+            { label: 'JavaFX', progress: 10 },
+            { label: 'Maven', progress: 30 },
           ],
         },
-        { label: 'VBA', progress: 0.4 },
-        { label: 'Git', progress: 0.4 },
-        { label: 'Linux', progress: 0.2 },
-        { label: 'Inkscape', progress: 0.2 },
-        { label: 'Figma', progress: 0.2 },
+        { label: 'VBA', progress: 40 },
+        { label: 'Git', progress: 40 },
+        { label: 'Linux', progress: 25 },
+        { label: 'Inkscape', progress: 20 },
+        { label: 'Figma', progress: 20 },
       ]}
     />
   );

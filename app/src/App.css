@@ -3,6 +3,9 @@ body {
   margin: 1em auto;
 }
 
+li {
+  line-height: 1.7em;
+}
 
 
 .App {
