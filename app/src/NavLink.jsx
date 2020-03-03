@@ -7,16 +7,20 @@ const Link = Styled.a`
   box-sizing: border-box;
   text-align: center;
   color: white;
-  background-color: hsl(0,0%,30%);
+  font-size: 1.2em;
+  background-color: hsl(198, 100%, 23%);
   padding: 0.5em 1em;
-  margin: 1em;
+  margin: 2em;
   font-weight: 600;
   text-decoration: none;
-  box-shadow: 5px 5px hsl(0,0%,15%);
-  width: 140px;
+  border-radius: 5px;
+  box-shadow: -5px 5px hsl(0,0%,25%);
+  width: 180px;
   display: inline-block;
+  transition: all 0.2s ease-in-out;
   &:hover {
-    background-color: hsl(0,0%,40%);
+    transition: all 0.2s ease-in-out;
+    background-color: hsl(198, 100%, 40%);
   }
 `;
 

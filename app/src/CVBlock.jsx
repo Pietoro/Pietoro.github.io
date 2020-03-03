@@ -6,19 +6,19 @@ import Styled from 'styled-components';
 
 const Div = Styled.div`
   border-radius: 5px;
-  padding: 1em;
-  margin: 1em;
+  padding: 0.1em 1em;
+  margin: 1.5em 1em;
   width: 370px;
-  background-color: hsl(50,50%,80%);
-  box-shadow: -5px 5px lightgray;
+  background-image: 
+      linear-gradient(180deg, hsl(40,85%,63%) 55px, hsl(0,0%,40%) 55px), 
+      linear-gradient(180deg, hsl(0,0%,40%) 100%, hsl(0,0%,40%) 99.99%, hsl(0,0%,40%) 100%);
+  box-shadow: -7px 7px hsl(0,0%,25%);
 `;
-
-
 
 function CVBlock({ elements, title }) {
   return (
     <Div>
-      <h3>{title}</h3>
+      <h3 className="block-header">{title}</h3>
       <ul>
         {elements
           .map((element) => (

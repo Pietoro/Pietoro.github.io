@@ -12,16 +12,11 @@ function CVBlockTech() {
           label: 'CSS3',
           progress: 40,
           sub: [
-            { label: 'SASS', progress: 30 },
+            { label: 'SASS (SCSS)', progress: 30 },
           ],
         },
-        {
-          label: 'JavaScript ES6+',
-          progress: 20,
-          sub: [
-            { label: 'React', progress: 10 },
-          ],
-        },
+        { label: 'JavaScript ES6+', progress: 20},
+        { label: 'React', progress: 10 },
         {
           label: 'Java 11+',
           progress: 40,
@@ -32,6 +27,7 @@ function CVBlockTech() {
           ],
         },
         { label: 'VBA', progress: 40 },
+        { label: 'SQL (Oracle, MySQL)', progress: 10 },
         { label: 'Git', progress: 40 },
         { label: 'Linux', progress: 25 },
         { label: 'Inkscape', progress: 20 },
