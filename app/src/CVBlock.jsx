@@ -2,10 +2,21 @@ import React from 'react';
 import './App.css';
 import PropTypes from 'prop-types';
 import CVBlockElement from './CVBlockElement';
+import Styled from 'styled-components';
+
+const Div = Styled.div`
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 1em;
+  margin: 1em;
+  width: 400px;
+`;
+
+
 
 function CVBlock({ elements, title }) {
   return (
-    <div>
+    <Div>
       <h3>{title}</h3>
       <ul>
         {elements
@@ -17,7 +28,7 @@ function CVBlock({ elements, title }) {
             />
           ))}
       </ul>
-    </div>
+    </Div>
   );
 }
 

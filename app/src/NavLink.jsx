@@ -2,28 +2,30 @@ import React from 'react';
 import Styled from 'styled-components';
 import './App.css';
 
-const Button = Styled.button`
+
+const Link = Styled.a`
   box-sizing: border-box;
+  text-align: center;
   color: white;
   background-color: hsl(0,0%,30%);
   padding: 0.5em 1em;
   margin: 1em;
   font-weight: 600;
-  border: none;
+  text-decoration: none;
   box-shadow: 5px 5px hsl(0,0%,15%);
-  width: 130px;
-  cursor: pointer;
+  width: 140px;
+  display: inline-block;
   &:hover {
     background-color: hsl(0,0%,40%);
   }
 `;
 
-function NavButton({ label, onClick }) {
+function NavLink({label, href}) {
   return (
-    <Button onClick={onClick}>
-      {label}
-    </Button>
+    <Link href={href} target="_blank">
+      { label }
+    </Link>
   );
 }
 
-export default NavButton;
+export default NavLink;
