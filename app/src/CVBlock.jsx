@@ -9,25 +9,37 @@ const Div = styled.div`
   padding: 0.1em 1em;
   margin: 1.5em 1em;
   background-image: 
-      linear-gradient(180deg, hsl(40,85%,63%) 60px, hsl(0,0%,40%) 60px), 
-      linear-gradient(180deg, hsl(0,0%,40%) 100%, hsl(0,0%,40%) 99.99%, hsl(0,0%,40%) 100%);
-  box-shadow: -7px 7px hsl(0,0%,25%);
+      linear-gradient(180deg, hsl(40,85%,63%) 60px, hsl(0,0%,35%) 60px);
+  box-shadow: -7px 7px hsl(0,0%,20%);
 `;
 
-function CVBlock({ elements, title }) {
+const Text = styled.div`
+  color: white;
+  white-space: pre-line;
+  line-height: 2em;
+  margin: 30px 15px;
+  font-weight: 600;
+`;
+
+function CVBlock({ elements, title, text }) {
   return (
     <Div>
       <h3 className="block-header">{title}</h3>
-      <ul>
-        {elements
-          .map((element) => (
-            <CVBlockElement
-              label={element.label}
-              progress={element.progress}
-              sub={element.sub}
-            />
-          ))}
-      </ul>
+      {elements != undefined
+        ? (<ul>
+          {elements
+            .map((element) => (
+              <CVBlockElement
+                label={element.label}
+                progress={element.progress}
+                sub={element.sub}
+              />
+            ))}
+        </ul>)
+        : undefined}
+        {text != undefined
+          ? <Text>{text}</Text>
+          : undefined }
     </Div>
   );
 }

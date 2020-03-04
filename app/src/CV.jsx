@@ -3,33 +3,59 @@ import './App.css';
 import CVBlockTech from './CVBlockTech';
 import CVBlockLang from './CVBlockLang';
 import CVBlock from './CVBlock';
+import {technologies,work,education,otherSkills} from './CVBlockContents';
 
 function CV() {
   return (
     <main>
-      <div style={{flex: "2",order:"1",width:"420px"}}><CVBlockTech /></div>
-      <div style={{flex: "2",order: "2",width:"420px"}}><CVBlockLang /></div>
-      <div style={{flex: "1",order: "3",width:"auto"}}><CVBlock
+      <div style={{
+                    flex: "2",
+                    order:"1",
+                    width:"40%"}}>
+        <CVBlockTech />
+      </div>
+      <div style={{
+                    flex: "2",
+                    order: "2",
+                    width:"40%"}}>
+        <CVBlockLang />
+      </div>
+      <div style={{
+                    flex: "4",
+                    order:"3",
+                    width:"40%"}}>
+        <CVBlock 
+              title="Auxillary skills"
+              text={otherSkills}>
+        </CVBlock>
+      </div>
+      <div style={{
+                    flex: "1",
+                    order: "4",
+                    width:"60%"}}>
+        <CVBlock
               title="Work experience"
-              elements={[
-                {label: 'Environmental Protection Specialist, EU ETS Auditor'},
-                {label: ' at TÜV Rheinland Polska Sp. z o.o.'},
-                {label: 'Industry Services & Cybersecurity Department'},]}>
-      </CVBlock></div>
-      <div style={{flex: "1",order:"4"}}><CVBlock 
+              text={work}>
+        </CVBlock>
+      </div>
+      <div style={{
+                    flex: "1",
+                    order:"5",
+                    width:"60%"}}>
+        <CVBlock 
               title="Education"
-              elements={[
-                {label: 'University of Silesia in Katowice, Faculty of Computer Science and Material Science'},
-                {label: ' B.Eng. Biomedical Engineering; specialty: Medical Computer Science'},
-                {label: ' specialisation: Medical Imaging'},]}>
-      </CVBlock></div>
-      <div style={{flex: "4",order:"5"}}><CVBlock 
-              title="Education1"
-              elements={[
-                {label: 'University of Silesia in Katowice, Faculty of Computer Science and Material Science'},
-                {label: ' B.Eng. Biomedical Engineering; specialty: Medical Computer Science'},
-                {label: ' specialisation: Medical Imaging'},]}>
-      </CVBlock></div>
+              text={education}>
+        </CVBlock>
+      </div>
+      <div style={{
+                    flex: "4",
+                    order:"6",
+                    width:"60%"}}>
+        <CVBlock 
+              title="Technical skills"
+              text={technologies}>
+        </CVBlock>
+      </div>
     </main>
   );
 }

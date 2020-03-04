@@ -14,14 +14,16 @@ function App() {
   return (
     <div>
       <Header />
-      <nav>
-        <NavButton label="CV" onClick={() => setDisplayed(<CV />)} />
-        <NavButton label="My projects" onClick={() => setDisplayed(<MyProjects />)} />
-        <NavLink label="My Linkedin" href="https://www.linkedin.com/in/ewelina-kania-6188bb143/" />
-        <NavLink label="My Github" href="https://github.com/Pietoro" />
-      </nav>
-      {displayed}
-      <footer>Ef</footer>
+      <div className='container'>
+        <nav>
+          <NavButton label="CV" onClick={() => setDisplayed(<CV />)} />
+          <NavButton label="My projects" onClick={() => setDisplayed(<MyProjects />)} />
+          <NavLink label="My Linkedin" href="https://www.linkedin.com/in/ewelina-kania-6188bb143/" />
+          <NavLink label="My Github" href="https://github.com/Pietoro" />
+        </nav>
+        {displayed}
+        <footer></footer>
+      </div>
     </div>
   );
 }

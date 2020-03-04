@@ -12,6 +12,7 @@ const ProgressBar = styled.div`
   float: right;
   right: 10px;
   margin-top: 7px;
+  margin-right: 10px;
 `;
 
 const Progress = styled.div` 

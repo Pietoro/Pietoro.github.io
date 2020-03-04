@@ -14,7 +14,7 @@ const Link = styled.a`
   font-weight: 600;
   text-decoration: none;
   border-radius: 5px;
-  box-shadow: -5px 5px hsl(0,0%,25%);
+  box-shadow: -5px 5px hsl(0,0%,20%);
   width: 180px;
   display: inline-block;
   transition: all 0.2s ease-in-out;
