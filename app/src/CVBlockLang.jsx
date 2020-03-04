@@ -1,6 +1,7 @@
 import React from 'react';
-import './App.css';
 import CVBlock from './CVBlock';
+import './App.css';
+
 
 function CVBlockLang() {
   return (

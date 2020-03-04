@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
 import PropTypes from 'prop-types';
-import Styled from 'styled-components';
+import styled from 'styled-components';
 
-const ProgressBar = Styled.div`
+const ProgressBar = styled.div`
   height: 11px;
   width: 150px;
   border: 3px solid white;
@@ -14,14 +14,14 @@ const ProgressBar = Styled.div`
   margin-top: 7px;
 `;
 
-const Progress = Styled.div` 
+const Progress = styled.div` 
   height: 11px;
   border-radius: 5px;
   width: ${props => props.value}%;
   background-color: hsl(198, 100%, 30%);
 `;
 
-const Label = Styled.span`
+const Label = styled.span`
   color: white;
 `;
 
@@ -29,10 +29,11 @@ function CVBlockElement({label, progress, sub}) {
   return(
     <li>
       <Label>{label}</Label>
-      <ProgressBar>
-        {progress != undefined
-          ? <Progress value={progress} /> : undefined}
-      </ProgressBar>
+      {progress != undefined
+          ? <ProgressBar>
+              <Progress value={progress} />
+            </ProgressBar> 
+          : undefined}
       <ul>
       {sub
         ? sub

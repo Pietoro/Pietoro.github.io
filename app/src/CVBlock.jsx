@@ -2,15 +2,14 @@ import React from 'react';
 import './App.css';
 import PropTypes from 'prop-types';
 import CVBlockElement from './CVBlockElement';
-import Styled from 'styled-components';
+import styled from 'styled-components';
 
-const Div = Styled.div`
-  border-radius: 5px;
+const Div = styled.div`
+  border-radius: 7px;
   padding: 0.1em 1em;
   margin: 1.5em 1em;
-  width: 370px;
   background-image: 
-      linear-gradient(180deg, hsl(40,85%,63%) 55px, hsl(0,0%,40%) 55px), 
+      linear-gradient(180deg, hsl(40,85%,63%) 60px, hsl(0,0%,40%) 60px), 
       linear-gradient(180deg, hsl(0,0%,40%) 100%, hsl(0,0%,40%) 99.99%, hsl(0,0%,40%) 100%);
   box-shadow: -7px 7px hsl(0,0%,25%);
 `;

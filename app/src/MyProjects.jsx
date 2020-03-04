@@ -4,7 +4,7 @@ import './App.css';
 function MyProjects() {
   return (
     <main>
-      My Projects
+      <h3>W.I.P.</h3>
     </main>
   );
 }

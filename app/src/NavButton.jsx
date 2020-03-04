@@ -1,15 +1,15 @@
 import React from 'react';
-import Styled from 'styled-components';
+import styled from 'styled-components';
 import './App.css';
 
-const Button = Styled.button`
+const Button = styled.button`
   box-sizing: border-box;
   color: white;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2em;
   background-color: hsl(198, 100%, 30%);
   padding: 0.5em 1em;
-  margin: 2em;
+  margin: 1.7em;
   font-weight: 600;
   border: none;
   border-radius: 5px;

@@ -1,16 +1,16 @@
 import React from 'react';
-import Styled from 'styled-components';
+import styled from 'styled-components';
 import './App.css';
 
 
-const Link = Styled.a`
+const Link = styled.a`
   box-sizing: border-box;
   text-align: center;
   color: white;
   font-size: 1.2em;
   background-color: hsl(198, 100%, 23%);
   padding: 0.5em 1em;
-  margin: 2em;
+  margin: 1.7em;
   font-weight: 600;
   text-decoration: none;
   border-radius: 5px;
